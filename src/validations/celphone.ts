@@ -1,3 +1,5 @@
+
+// Função para validar número de celular brasileiro
 export function validarCelular(celular: string): boolean {
     const numeros = celular.replace(/\D/g, '');
 
@@ -12,6 +14,7 @@ export function validarCelular(celular: string): boolean {
     return true;
 }
 
+// Função para formatar número de celular no padrão (00) 00000-0000
 export function formatarCelular(celular: string): string {
     const numeros = celular.replace(/\D/g, '');
 

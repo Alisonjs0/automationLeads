@@ -5,6 +5,7 @@ export interface AddressData {
   uf: string;
 }
 
+// Função para buscar endereço via API do ViaCEP
 export const fetchAddressByCEP = async (cep: string): Promise<AddressData | null> => {
   try {
     const cleanCEP = cep.replace(/\D/g, '');
@@ -32,11 +33,13 @@ export const fetchAddressByCEP = async (cep: string): Promise<AddressData | null
   }
 };
 
+// Função para validar o formato do CEP
 export const validateCEP = (cep: string): boolean => {
   const cleanCEP = cep.replace(/\D/g, '');
   return cleanCEP.length === 8;
 };
 
+// Função para formatar o CEP no padrão 00000-000
 export const formatarCEP = (cep: string): string => {
   const numeros = cep.replace(/\D/g, '');
   

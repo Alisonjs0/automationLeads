@@ -3,6 +3,7 @@ interface ButtonFormsProps {
     labelButton: string;
 }
 
+// Componente ButtonForms reutilizável
 const ButtonForms: React.FC<ButtonFormsProps> = ({ onclick, labelButton }) => {
   return (
     <div className="w-full">
